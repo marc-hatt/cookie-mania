@@ -43,7 +43,7 @@ function createCookie(name, picture) {
 $(function() {
     const $main = $('#cookie');
 
-    $main.append(createCookie('Peter', './assets/cookie_8bit_good.png'));
+    $main.append(createCookie('Peter', '../assets/cookie_8bit_good.png'));
 
 });
 
