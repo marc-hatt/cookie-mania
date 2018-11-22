@@ -23,7 +23,6 @@ class Cookie {
     cookieDiv.append(self.counter);
 
     self.img.click(function() {
-        //self.count=self.count+10;
         self.counter.text(`${self.count}.`);
     });
     }
@@ -37,8 +36,8 @@ function createCookie(name, picture) {
     const $counter = $('<p/>').appendTo($cookie);
 
     $img.click(() => {
-    //clickCount++;
-    clickCount=clickCount+25;
+    clickCount++;
+    //clickCount=clickCount+25;
     $counter
         .text(`${clickCount}`)
 
