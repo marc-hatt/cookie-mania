@@ -1,3 +1,8 @@
+let showOverlay = document.getElementById("showOverlay");
+let gameover = document.getElementById("gameover");
+let close = document.getElementById("close");
+let total = document.getElementById("total");
+
 class Cookie {
     constructor(name, picture) {
     let self = this;
@@ -18,7 +23,6 @@ class Cookie {
     cookieDiv.append(self.counter);
 
     self.img.click(function() {
-        self.count++;
         self.counter.text(`${self.count}.`);
     });
     }
@@ -33,9 +37,18 @@ function createCookie(name, picture) {
 
     $img.click(() => {
     clickCount++;
+    //clickCount=clickCount+25;
     $counter
         .text(`${clickCount}`)
+
+        if (clickCount >= 100) {
+          gameover.classList.remove("layer-hidden");
+          total.innerHTML = clickCount;
+
+        }
+
     });
+
 
     return $cookie;
 }
@@ -60,6 +73,7 @@ $('#cookie').click(function() {
         left: Math.floor( Math.random() * widthMax ),
         top: Math.floor( Math.random() * heightMax )
     });
+
 });
 
 var up = true;
