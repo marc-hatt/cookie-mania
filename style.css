@@ -17,6 +17,15 @@ h2 {
     padding-top: 20%;
 }
 
+#backbutton {
+    color: black;
+}
+
+#backbutton:hover {
+    transition: 0.5s;
+    color: white;
+}
+
 .disclaimer {
     width: 300px;
     height: auto;
